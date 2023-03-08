@@ -1,21 +1,7 @@
 import LineGradient from "../components/LineGradient";
-import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 
 const Mint = () => {
-  const {
-    register,
-    trigger,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = async (e) => {
-    console.log("~ e", e);
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
-    }
-  };
 
   return (
     <section id="mint" className="contact py-48">
